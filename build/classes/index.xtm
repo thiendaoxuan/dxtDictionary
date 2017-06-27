@@ -1,0 +1,117 @@
+
+<html lang="en-US">
+<head>
+	<title>DxT Dictionary</title>
+	<link rel="stylesheet" type="text/css" href="resources/style.css">
+	<link rel="icon" href="https://img.zing.vn/vng/skin/homepage16062010/images/icon_fav_vng.ico">	
+	<script type="text/javascript" src="resources/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="resources/js/dictionary-main.js"></script>
+	<script type="text/javascript">var lbplugin_event_opt={"extension_enable":true,"dict_type":1,"dbclk_event":{"trigger":"none","enable":true,"display":1},"select_event":{"trigger":"none","enable":true,"display":1}};function loadScript(t,e){var n=document.createElement("script");n.type="text/javascript",n.readyState?n.onreadystatechange=function(){("loaded"===n.readyState||"complete"===n.readyState)&&(n.onreadystatechange=null,e())}:n.onload=function(){e()},n.src=t,document.getElementsByTagName("head")[0].appendChild(n)}setTimeout(function(){null==document.getElementById("lbdictex_find_popup")&&loadScript("http://stc.laban.vn/dictionary/js/plugin/lbdictplugin.min.js?"+Date.now()%1e4,function(){lbDictPlugin.init(lbplugin_event_opt)})},1e3);</script>
+</head>
+
+<body>
+	<div id="topbar"> 
+		<div class = "centerTop">
+			<div id="loginSpace">
+				<button type="button" id="authen">{{AuthenTODO}}</button>
+				
+			</div>
+
+
+		</div>
+	</div>
+
+	{{#loginSection}}
+	<div class = "centerTop">
+	<form id='loginform'>
+		<input type="text" name="username"  id="usernameBox" class="custom-input" placeholder="username"> 
+		<input type="password" name="passwords" id="passwordsBox" class="custom-input" placeholder="passwords">  
+		<button type="button" id="loginBtn">login</button>    
+		<button type="button" id="cancelLoginBtn">Cancel</button>   
+	</form>
+	</div>
+
+
+	{{/loginSection}}
+
+
+	<div id="w">
+
+		{{#topListSection}}
+		<div id = "topList"> 
+		<h1> Top List </h1>
+                    <h3>
+                        {{#topWord}}
+			<span class='wcount'> {{word}} <span class='count'> {{time}} </span> </span>
+                        {{/topWord}}
+                    </h3>
+		</div>
+		{{/topListSection}}
+
+		<div id="content">
+			<br>
+			<h1> What's on your mind ? </h1>
+
+			<div id="searchfield">
+				<form><input autocomplete="off" type="text" name="word" class="biginput" id="wordBox">
+					<div id="suggesstion-box"></div>
+				</form>
+			</div>
+
+			<div id ="autoCompleteBox"> </div>
+
+			<div class="largeMid">
+
+			{{#responseSection}}
+                        
+                        <h1> {{translatedWord}} </h1>
+			<div id="translate"> {{translation}} </div>
+
+			<div id="images"> </div>
+			{{/responseSection}}			
+
+			</div>
+
+            {{#editSection}}
+            <button type="button" id="editWord" class="changeBtn">Edit</button>
+			<button type="button" id="deleteWord" class="changeBtn">Delete</button>
+            {{/editSection}}
+
+            {{#newWordSection}}
+            
+			<button type="button" id="addWord" class="changeBtn">New Word</button>            
+
+			{{/newWordSection}}
+			<br>
+			{{#adminSection}}
+
+
+			
+
+			<div id="modField">
+				<form>
+					<input type="text" name="word" id="wordToChange" class="custom-input" placeholder="word"> <br>
+					<textarea rows="4" id ="wordToChangeContent" class="custom-input" placeholder="translation"></textarea>
+				</form>
+				<button type="button" id="changeConfirm">OK</button>
+				<button type="button" id="changeCancel">Cancel</button>
+			</div>
+			
+
+			<br>
+
+			
+
+			
+
+			{{/adminSection}}
+
+
+			<h1> Sponsored By </h1>
+			<img src="https://homiemap.vng.com.vn/assets/vngLogoBig.png" id = "vngLogo">
+
+		</div><!-- @end #content -->
+	</div><!-- @end #w -->
+</body>
+</html>

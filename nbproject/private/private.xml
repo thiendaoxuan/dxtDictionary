@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/cpu10878-local/NetBeansProjects/TestApp.New/src/com/vng/zing/cache/DictionaryCache.java</file>
+            <file>file:/home/cpu10878-local/NetBeansProjects/TestApp.New/src/com/vng/zing/common/TemplateManager.java</file>
+            <file>file:/home/cpu10878-local/NetBeansProjects/TestApp.New/view/js/dictionary-main.js</file>
+            <file>file:/home/cpu10878-local/NetBeansProjects/TestApp.New/src/com/vng/zing/autoComplete/ElasticSearch.java</file>
+            <file>file:/home/cpu10878-local/NetBeansProjects/TestApp.New/src/com/vng/zing/testapp/handlers/Thrift/TDictionaryHandler.java</file>
+            <file>file:/home/cpu10878-local/NetBeansProjects/TestApp.New/src/com/vng/zing/testapp/model/webapp/ThriftClient.java</file>
+            <file>file:/home/cpu10878-local/NetBeansProjects/TestApp.New/src/com/vng/zing/testapp/model/webapp/DictionaryAPIModel.java</file>
+            <file>file:/home/cpu10878-local/NetBeansProjects/TestApp.New/view/style.css</file>
+            <file>file:/home/cpu10878-local/NetBeansProjects/TestApp.New/src/com/vng/zing/testapp/model/webapp/HomePageModel.java</file>
+            <file>file:/home/cpu10878-local/NetBeansProjects/TestApp.New/src/com/vng/zing/testapp/model/Thift/TDictionaryModel.java</file>
+        </group>
+    </open-files>
+</project-private>
