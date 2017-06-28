@@ -115,7 +115,7 @@ public class DictionaryAPIModel extends BaseModel {
                 case "autocomplete":
                     Set data = CLIENT.autoComplete(word);
                     if (data == null || data.isEmpty()) {
-                        out.println("{}");
+                        out.println("[]");
                     } else {
                         out.println(new ArrayList(data));
                     }
@@ -177,7 +177,7 @@ public class DictionaryAPIModel extends BaseModel {
         }
 
         translation = CLIENT.translate(word);
-        if (translation != null) {
+        if (translation != null && !translation.isEmpty()) {
             updateCount(word);
             CACHE.updateTranslation(word, translation);
             return translation;

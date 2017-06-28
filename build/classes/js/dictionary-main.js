@@ -42,6 +42,7 @@ function addPicture(word) {
 
         for (i = 0; i < 6; i++) {
             item = data[i];
+            if(!item)return;
             var img = $('<img>'); //Equivalent: $(document.createElement('img'))
             img.attr('src', item.toString());
             img.appendTo('#images');

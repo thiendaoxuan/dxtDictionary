@@ -36,6 +36,9 @@ public class TDictionaryModel {
         ThreadProfiler profiler = Profiler.getThreadProfiler();
         profiler.push(clazz, "translate");
         String translation = DATA_BASE_ACCESS.getTranslation(word);
+        if(translation == null){
+            translation = "";
+        }
 
         profiler.pop(clazz, "translate");
         return translation;

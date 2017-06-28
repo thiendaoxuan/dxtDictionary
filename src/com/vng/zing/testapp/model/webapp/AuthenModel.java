@@ -28,33 +28,11 @@ public class AuthenModel extends BaseModel {
 
     private AuthenModel() {
 
-        /*ZClientPoolUtil.SetDefaultPoolProp(ThriftServers.class //clazzOfCfg
-                ,
-                 _Tname //instName
-                ,
-                 null//host
-                ,
-                 null //auth
-                ,
-                 86400 //timeout
-                ,
-                 ZCommonDef.TClientNRetriesDefault //nretry
-                ,
-                 ZCommonDef.TClientMaxRdAtimeDefault //maxRdAtime
-                ,
-                 ZCommonDef.TClientMaxWrAtimeDefault //maxWrAtime
-        );
-        ZClientPoolUtil.GetListPools(ThriftServers.class, _Tname, new DictionaryService.Client.Factory()); //auto create pools
-        _bizzCfg = ZClientPoolUtil.GetBizzCfg(ThriftServers.class, _Tname);
+       
         
-        System.out.println(_bizzCfg);*/
-        // dictionaryClientPool = TClientFactory<DictionaryService.Client>.Borrow();
-        // dictionaryClientPool = new TClientPool<DictionaryService.Client>();
     }
 
-    /* private TClientPool<DictionaryService.Client> getClientPool() {
-        return (TClientPool<DictionaryService.Client>) ZClientPoolUtil.GetPool(ThriftServers.class, _Tname);
-    }*/
+   
     @Override
     public void process(HttpServletRequest req, HttpServletResponse resp) {
 

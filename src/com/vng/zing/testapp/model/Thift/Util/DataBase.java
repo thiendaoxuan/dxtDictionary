@@ -33,9 +33,7 @@ import org.apache.thrift.TSerializer;
  *
  * @author cpu10878-local
  */
-
 // Contain all connection to Kyoto Cabinet activity
-
 public class DataBase {
 
     public static final DataBase Instance = new DataBase();
@@ -106,7 +104,7 @@ public class DataBase {
         word = WORD_PREFIX + word.toUpperCase();
         ByteBuffer key = ByteBufferUtil.fromString(word);
         long sucess = ZIDB_CLIENT.remove(key);
-        
+
         return (ZErrorHelper.isSuccess(sucess));
     }
 
@@ -138,7 +136,11 @@ public class DataBase {
         try {
             word = IMAGE_PREFIX + word.toUpperCase();
             TValueResult getValue = ZIDB_CLIENT.get(ByteBufferUtil.fromString(word));
-            return ByteBufferUtil.toString(getValue.value.data);
+            if (ZErrorHelper.isSuccess(getValue.error)) {
+                return ByteBufferUtil.toString(getValue.value.data);
+            } else {
+                return null;
+            }
         } catch (Exception ex) {
             _Logger.error(null, ex);
             return null;
@@ -257,7 +259,7 @@ public class DataBase {
             if (topList.has(word) || topList.length() < TOP_LIST_MAX_LENGTH) {
                 topList.put(word, times);
             } else {
-                
+
                 Iterator<String> keys = topList.keys();
 
                 while (keys.hasNext()) {
@@ -301,7 +303,6 @@ public class DataBase {
 
     }
 
-    
     // For testing purpourse
     private void deleteTopList() {
         ByteBuffer key = ByteBufferUtil.fromString(TOP_COUNT_LIST);
